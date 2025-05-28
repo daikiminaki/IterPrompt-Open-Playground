@@ -1,5 +1,4 @@
 import { Model } from "@/lib/core/IModel";
-import { TableRow } from "@/components/ui/input";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { providerLogo } from "@/lib/definitions";
 import Image from "next/image";

@@ -70,7 +70,7 @@ const PlaygroundPanel = forwardRef<PlaygroundPanelRef, PlaygroundPanelProps>(({ 
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
-    let assistantMessage = {id: uuidv4(), role: 'assistant' as const, content: ''};
+    const assistantMessage = {id: uuidv4(), role: 'assistant' as const, content: ''};
 
     try {
       while (true) {

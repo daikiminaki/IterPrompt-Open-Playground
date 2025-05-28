@@ -5,7 +5,6 @@ import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, Dr
 import { usePlayground } from "@/contexts/PlaygroundContext";
 import { KeyRound } from "lucide-react";
 import { ApiKeyForm } from "@/components/playground/settings/ApiKeyForm";
-import { useState } from "react";
 import { toast } from "sonner";
 
 export default function ApiKeyDrawer() {

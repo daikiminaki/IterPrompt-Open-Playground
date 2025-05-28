@@ -24,15 +24,15 @@ export default function PlaygroundMain() {
     if (!sessions[sessionId]?.isSynced) return;
 
     // Get all other synced sessions
-    const syncedSessions = Object.entries(sessions).filter(([id, session]) => 
-      session.isSynced
+    const syncedSessions = Object.entries(sessions).filter(([id]) => 
+      sessions[id].isSynced
     );
     
     // Submit to all other synced sessions independently
-    syncedSessions.forEach(([id, _]) => {
+    syncedSessions.forEach(([id]) => {
       // Fire and forget - don't await the submissions
       panelRefs.current[id]?.submitUserInput(userInput)
-        .catch(error => console.error(`Error submitting to panel ${id}:`, error));
+        .catch((error: Error) => console.error(`Error submitting to panel ${id}:`, error));
     });
   }
 

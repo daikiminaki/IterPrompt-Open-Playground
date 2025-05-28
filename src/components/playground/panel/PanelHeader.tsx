@@ -1,4 +1,4 @@
-import { Ellipsis, Plus, Settings, SlidersHorizontal, ToggleLeft, ToggleRight } from "lucide-react";
+import { Ellipsis, Plus, SlidersHorizontal, ToggleLeft, ToggleRight } from "lucide-react";
 import { ModelDropdown } from "./ModelDropdown";
 import { Model, Session } from "@/lib/core/IModel";
 import { PlaygroundIconButton } from "@/components/ui/button";

@@ -21,12 +21,15 @@ export async function POST(req: Request) {
   }
 
   // Stream Model
-  const result = generateLLMText({
+  const result = await generateLLMText({
     modelId: model.modelId, 
     messages, 
     parameters: model.parameters,
     apiKey: apiKey
   });
 
-  return result;
+  return new Response(
+    JSON.stringify(result),
+    { headers: { "Content-Type": "application/json" } }
+  );
 }

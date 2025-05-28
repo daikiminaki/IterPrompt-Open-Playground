@@ -27,7 +27,6 @@ export function ModelDropdown({
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState<Model>(models[0])
   const [selectedPreview, setSelectedPreview] = useState<Model>(models[0])
-  const [loadingDetail, setLoadingDetail] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
   // fetch list on mount
@@ -86,11 +85,7 @@ export function ModelDropdown({
               {selected?.displayName ?? placeholder}
             </span>
           </div>
-          {loadingDetail ? (
-            <Loader2 className="animate-spin h-4 w-4" />
-          ) : (
-            <ChevronDown className="h-4 w-4" />
-          )}
+          <ChevronDown className="h-4 w-4" />
         </button>
       </PopoverTrigger>
 

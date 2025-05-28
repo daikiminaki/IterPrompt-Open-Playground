@@ -42,7 +42,7 @@ export function PanelChat({ session, loading }: { session: Session; loading?: bo
   return (
     <div className="h-full overflow-y-auto">
       <div className="p-4 space-y-6">
-        {messageGroups.map((group, groupIndex) => (
+        {messageGroups.map((group) => (
           <div
             key={group.messages[0].id}
             id={`message-${group.messages[0].id}`}

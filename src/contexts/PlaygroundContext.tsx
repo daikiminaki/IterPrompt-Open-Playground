@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useMemo, useCallback } from 'react';
+import { createContext, useContext, useState, ReactNode, useMemo } from 'react';
 import { Session } from '@/lib/core/IModel';
 import { models } from '@/lib/definitions';
 import { ApiKeysMap } from '@/lib/core/IApiKey';
@@ -31,7 +31,7 @@ export function PlaygroundProvider({ children }: { children: ReactNode }) {
   const [openApiKeyDrawer, setOpenApiKeyDrawer] = useState(false)
 
   const getApiKey = (modelId: string) => {
-    const [provider, _] = modelId.split(':')
+    const [provider] = modelId.split(':')
     return apiKeys[provider]
   }
 
