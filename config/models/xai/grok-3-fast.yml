@@ -1,0 +1,14 @@
+id: grok-3-fast
+displayName: "Grok 3 Fast"
+parameters:
+  temperature: 0.7
+  maxTokens: 8192
+description: |
+  Grok 3 Fast from XAI, 8K context window.
+capabilities:
+  - text
+  - object-generation
+  - tool-usage
+  - tool-streaming
+  
+

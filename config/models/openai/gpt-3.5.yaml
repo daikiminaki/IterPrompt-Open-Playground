@@ -1,0 +1,7 @@
+id: gpt-4
+displayName: "OpenAI GPT-4"
+parameters:
+  temperature: 0.7
+  maxTokens: 8192
+description: |
+  GPT-4 from OpenAI, 8K context window.
